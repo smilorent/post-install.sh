@@ -1,0 +1,20 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: check-merge-conflict
+        name: "Check for merge conflicts"
+    -   id: check-shebang-scripts-are-executable
+        name: "Check for non-executable shell scripts"
+    -   id: end-of-file-fixer
+        name: "Add newlines to end of files where not present"
+    -   id: trailing-whitespace
+        name: "Remove trailing whitespace from text files"
+-   repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+    -   id: shellcheck
+        name: "Run `shellcheck` linter on shell scripts"
+        args: ["--external-sources"]
+    -   id: shfmt
+        name: "Run `shfmt` formatter on shell scripts"
